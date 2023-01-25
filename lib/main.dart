@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/screens/categories_screen.dart';
+import 'package:meals_app/screens/meal_detail_screen.dart';
+import 'package:meals_app/screens/tabs_screen.dart';
 
 import 'screens/category_meals_screen.dart';
 
@@ -33,18 +35,24 @@ class _MyHomePageState extends State<MyHomePage> {
               bodyText2: TextStyle(
                 color: Color.fromRGBO(20, 51, 51, 1),
               ),
-              caption: TextStyle(
+              headline6: TextStyle(
                 fontSize: 20,
                 fontFamily: 'RobotoCondensed',
                 fontWeight: FontWeight.bold,
               ),
+              // caption: TextStyle(
+              //   fontSize: 20,
+              //   fontFamily: 'RobotoCondensed',
+              //   fontWeight: FontWeight.bold,
+              // ),
             ),
       ),
       // home: CategoriesScreen(),
-      initialRoute: 'categoriesScreen', // default is '/'
+      initialRoute: '/category',
       routes: {
-        'categoriesScreen': (ctx) => CategoriesScreen(),
-        '/category-meal': (context) => CategoryMealsScreen(),
+        '/category': (context) => TabsScreen(),
+        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        MealDetailScreen.routeName: (context) => MealDetailScreen(),
       },
     );
   }
