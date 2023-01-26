@@ -62,7 +62,7 @@ _flutter.loader = null;
       ];
       if (window.trustedTypes) {
         this.policy = trustedTypes.createPolicy(policyName, {
-          createScriptURL: function(url) {
+          createScriptURL: function (url) {
             const parsed = new URL(url, window.location);
             const file = parsed.pathname.split("/").pop();
             const matches = patterns.some((pattern) => pattern.test(file));
@@ -110,7 +110,7 @@ _flutter.loader = null;
       const {
         serviceWorkerVersion,
         serviceWorkerUrl = "flutter_service_worker.js?v=" +
-          serviceWorkerVersion,
+        serviceWorkerVersion,
         timeoutMillis = 4000,
       } = settings;
 
@@ -360,3 +360,20 @@ _flutter.loader = null;
   _flutter.loader = new FlutterLoader();
 })();
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAI1WSh1u6qeSwEx4u6209goirPApChxNg",
+  authDomain: "meals-app-2023.firebaseapp.com",
+  projectId: "meals-app-2023",
+  storageBucket: "meals-app-2023.appspot.com",
+  messagingSenderId: "194429787070",
+  appId: "1:194429787070:web:8a5ce4128ea7573a5037ef"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
