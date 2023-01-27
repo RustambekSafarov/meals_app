@@ -39,7 +39,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed('/category');
+              Navigator.of(context).pushReplacementNamed('/tabs');
             },
           ),
           ListTile(

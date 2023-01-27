@@ -91,9 +91,9 @@ class _MyAppState extends State<MyApp> {
             ),
       ),
       // home: CategoriesScreen(),
-      initialRoute: '/', // default is '/'
+      initialRoute: '/tabs', // default is '/'
       routes: {
-        '/': (ctx) => TabsScreen(_favoriteMeals),
+        '/tabs': (ctx) => TabsScreen(_favoriteMeals),
         CategoryMealsScreen.routeName: (ctx) =>
             CategoryMealsScreen(_availableMeals),
         MealDetailScreen.routeName: (ctx) =>
